@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Caller:</strong>
+  <%= @recording.caller %>
+</p>
+
+<p>
+  <strong>Call date:</strong>
+  <%= @recording.call_date %>
+</p>
+
+<p>
+  <strong>Recording folder:</strong>
+  <%= @recording.recording_folder %>
+</p>
+
+<p>
+  <strong>Copied to mp3:</strong>
+  <%= @recording.copied_to_mp3 %>
+</p>
+
+<%= link_to 'Edit', edit_recording_path(@recording) %> |
+<%= link_to 'Back', recordings_path %>

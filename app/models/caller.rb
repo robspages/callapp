@@ -1,0 +1,2 @@
+class Caller < ApplicationRecord
+end

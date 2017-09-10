@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  user: callapp
+  password: ']wvnq:p!:kcpq|)(sW3KUR{('
+  pool: 20
+  timeout: 5000
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
