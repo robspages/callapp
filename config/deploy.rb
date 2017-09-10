@@ -7,8 +7,8 @@ require 'mina/puma'
 set :application_name, 'callapp'
 set :domain, 'vault'
 set :user, 'server'
-set :deploy_to, 'callvault/'
-set :repository, 'git://'
+set :deploy_to, 'callapp/'
+set :repository, 'https://github.com/robspages/callapp.git'
 set :branch, 'master'
 
 # shared dirs and files will be symlinked into the app-folder by the 'deploy:link_shared_paths' step.
@@ -45,6 +45,8 @@ task :deploy do
     invoke :'rails:db_migrate'
     invoke :'rails:assets_precompile'
     invoke :'deploy:cleanup'
+
+    invoke :'puma:phased_restart'
 
     on :launch do
       in_path(fetch(:current_path)) do
