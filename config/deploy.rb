@@ -7,7 +7,7 @@ require 'mina/puma'
 set :application_name, 'callapp'
 set :domain, 'vault'
 set :user, 'server'
-set :deploy_to, 'callapp'
+set :deploy_to, '/home/server/callapp'
 set :repository, 'https://github.com/robspages/callapp.git'
 set :branch, 'master'
 
