@@ -1,0 +1,130 @@
+=== puma startup: 2018-07-23 12:00:44 +0200 ===
+Exiting
+=== puma startup: 2018-07-23 12:53:38 +0200 ===
+Exiting
+=== puma startup: 2018-07-23 12:58:29 +0200 ===
+Exiting
+=== puma startup: 2018-07-23 13:11:02 +0200 ===
+Exiting
+=== puma startup: 2018-07-23 13:12:28 +0200 ===
+Exiting
+=== puma startup: 2018-09-08 14:07:44 -0400 ===
+Exiting
+=== puma startup: 2018-09-08 14:43:24 -0400 ===
+[95331] * Starting control server on unix:///var/folders/rs/wb4stqx52r3bzf7l3z7m37ym0000gn/T/puma-status-1536432204013-95331
+[95331] - Worker 1 (pid: 95350) booted, phase: 0
+[95331] - Worker 2 (pid: 95351) booted, phase: 0
+[95331] - Worker 3 (pid: 95352) booted, phase: 0
+[95331] - Worker 0 (pid: 95349) booted, phase: 0
+[95331] - Gracefully shutting down workers...
+[95331] === puma shutdown: 2018-09-08 16:53:23 -0400 ===
+[95331] - Goodbye!
+Exiting
+=== puma startup: 2018-09-08 16:53:31 -0400 ===
+[98140] * Starting control server on unix:///var/folders/rs/wb4stqx52r3bzf7l3z7m37ym0000gn/T/puma-status-1536440011288-98140
+[98140] - Worker 3 (pid: 98154) booted, phase: 0
+[98140] - Worker 0 (pid: 98151) booted, phase: 0
+[98140] - Worker 1 (pid: 98152) booted, phase: 0
+[98140] - Worker 2 (pid: 98153) booted, phase: 0
+[98140] - Gracefully shutting down workers...
+[98140] === puma shutdown: 2018-09-08 17:09:47 -0400 ===
+[98140] - Goodbye!
+Exiting
+=== puma startup: 2018-09-08 17:10:32 -0400 ===
+[99989] * Starting control server on unix:///var/folders/rs/wb4stqx52r3bzf7l3z7m37ym0000gn/T/puma-status-1536441032660-99989
+[99989] - Worker 0 (pid: 108) booted, phase: 0
+[99989] - Worker 3 (pid: 111) booted, phase: 0
+[99989] - Worker 2 (pid: 110) booted, phase: 0
+[99989] - Worker 1 (pid: 109) booted, phase: 0
+[99989] - Gracefully shutting down workers...
+[99989] === puma shutdown: 2018-09-08 17:10:55 -0400 ===
+[99989] - Goodbye!
+Exiting
+=== puma startup: 2018-09-08 17:11:06 -0400 ===
+[161] * Starting control server on unix:///var/folders/rs/wb4stqx52r3bzf7l3z7m37ym0000gn/T/puma-status-1536441066310-161
+[161] - Worker 1 (pid: 175) booted, phase: 0
+[161] - Worker 3 (pid: 177) booted, phase: 0
+[161] - Worker 2 (pid: 176) booted, phase: 0
+[161] - Worker 0 (pid: 174) booted, phase: 0
+Started GET "/" for ::1 at 2018-09-08 17:11:16 -0400
+  
+ActiveRecord::NoDatabaseError (FATAL:  role "callapp" does not exist
+):
+  
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:701:in `rescue in connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:697:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:221:in `initialize'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for ::1 at 2018-09-08 17:17:52 -0400
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/rob/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/rob/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (4.8ms)
+Completed 200 OK in 33ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-09-08 17:37:12 -0400
+  
+NoMethodError (undefined method `root_to' for #<ActionDispatch::Routing::Mapper:0x007fa8ccb94638>
+Did you mean?  root):
+  
+config/routes.rb:8:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2018-09-08 17:37:25 -0400
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 878ms (Views: 860.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-09-08 17:41:19 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 127ms (Views: 123.0ms | ActiveRecord: 0.0ms)
+
+

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170909192202) do
+ActiveRecord::Schema.define(version: 20180908213033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 20170909192202) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "calls", force: :cascade do |t|
+    t.bigint "callers_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["callers_id"], name: "index_calls_on_callers_id"
+  end
+
   create_table "recordings", force: :cascade do |t|
     t.bigint "caller_id"
     t.datetime "call_date"
@@ -33,10 +40,14 @@ ActiveRecord::Schema.define(version: 20170909192202) do
     t.string "checksum"
     t.text "transcript"
     t.string "file_path"
+    t.bigint "call_id"
+    t.index ["call_id"], name: "index_recordings_on_call_id"
     t.index ["caller_id"], name: "index_recordings_on_caller_id"
     t.index ["checksum"], name: "index_recordings_on_checksum"
     t.index ["transcript"], name: "index_recordings_on_transcript"
   end
 
+  add_foreign_key "calls", "callers", column: "callers_id"
   add_foreign_key "recordings", "callers"
+  add_foreign_key "recordings", "calls"
 end
