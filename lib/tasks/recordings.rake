@@ -42,7 +42,7 @@ namespace :recordings do
           rec.transcript = transcript.join(" || ")
         end
       end
-      rec.save
+      clear_tmp if rec.save
       puts "converted #{i} of #{ending_paths.count}"
     end
   end
@@ -50,6 +50,10 @@ namespace :recordings do
   def build_filename(files)
     output_name = (files.count > 1 ? 'combined' : 'converted')
     return "#{Time.now.strftime('%Y-%m-%d_%H-%M-%S')}_#{output_name}"
+  end
+
+  def clear_tmp
+    FileUtils.rm_rf 'tmp/'
   end
 
   def build_sox_command(files,path,filename)
